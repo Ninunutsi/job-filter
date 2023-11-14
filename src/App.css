@@ -1,38 +1,179 @@
 .App {
-  text-align: center;
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --LightGrayishCyan: hsl(180, 52%, 96%);
+  --LightGrayishCyanCard: hsl(180, 31%, 95%);
+  --DarkGrayishCyan: hsl(180, 8%, 52%);
+  --VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+  --DesaturatedDarkCyan: hsl(180, 29%, 50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  max-width: 100%;
+  height: 30vh;
+  background-image: url(../public/images/bg-header-desktop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--DesaturatedDarkCyan);
 }
 
-.App-header {
-  background-color: #282c34;
+.data-component {
+  padding: 30px 0;
+  width: 100%;
+  background-color: var(--LightGrayishCyanCard);
+  position: relative;
   min-height: 100vh;
+}
+
+.filter-container {
+  position: absolute;
+  width: 80%;
+  background-color: var(--LightGrayishCyan);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 25px 15px;
+  top: -50px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-span {
+  display: flex;
+  padding: 10px 15px;
+  background-color: hsla(180, 29%, 50%, 0.07);
+  color: var(--DesaturatedDarkCyan);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.filter-div {
+  display: flex;
+  align-items: center;
+}
+
+.x {
+  background-color: var(--DesaturatedDarkCyan);
+  color: white;
+  font-size: 25px;
+  padding: 9px 6px;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.x:hover {
+  background-color: var(--VeryDarkGrayishCyan);
+  transition: 0.5s ease-in;
+}
+
+.card-container {
+  width: 80%;
+  margin: 25px auto;
+  background-color: var(--LightGrayishCyan);
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-container:first-child,
+.card-container:nth-child(2) {
+  border-left: 5px solid var(--DesaturatedDarkCyan);
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-info-details {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+.card-info-details-header {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+
+.company {
+  color: var(--DesaturatedDarkCyan);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.factor {
   color: white;
+  padding: 4px 6px;
+  border-radius: 15px;
+  font-size: 10px;
+  line-height: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.new {
+  background-color: var(--DesaturatedDarkCyan);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.featured {
+  background-color: var(--VeryDarkGrayishCyan);
+}
+
+.position {
+  color: var(--VeryDarkGrayishCyan);
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+.card-info-details-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--DarkGrayishCyan);
+}
+
+.card-info-details-footer h3 {
+  font-weight: lighter;
+}
+
+.card-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-list span {
+  color: var(--DesaturatedDarkCyan);
+  font-weight: 700;
+  padding: 10px 15px;
+  line-height: 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: hsla(180, 29%, 50%, 0.105);
+}
+
+.card-list span:hover {
+  transition: 0.5s ease-in-out;
+  color: white;
+  background-color: var(--DesaturatedDarkCyan);
 }
